@@ -14,8 +14,6 @@ const Homepage = () => {
     socket.on("joined-room", handleRoomJoined);
   }, [socket]);
   const handleJoinRoom = (e) => {
-    e.preventDefault();
-
     socket.emit("join-room", { emailId, roomId });
   };
 
